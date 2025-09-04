@@ -15,17 +15,28 @@ h2 {
   font-size: 2em;
 }
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  margin: 0px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #eee;
 }
 
 /******************
-        /***** NAV *****/
+/***** NAV *****/
 /* Basic reset */
 * {
   box-sizing: border-box;
+}
+
+a.button {
+  display: inline-block;
+  background: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .main-nav {
@@ -116,9 +127,10 @@ body {
 header {
   text-align: center;
   background-size: cover;
-  background-image: url("images/banner.jpg");
+  background-image: url("images/sdsp_banner.jpg");
   color: white;
-  padding: 250px 20px;
+  padding: 200px 20px;
+  background-color: rgba(0,0,0,1);
 }
 
 section {
@@ -216,14 +228,25 @@ button {
   padding: 10px 20px;
   margin-top: 10px;
 }
-.bg-black {
+
+.header-bg-black {
   background-color: rgba(0, 0, 0, 0.65);
   padding: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
 }
+
+  .main-title {
+    font-size: 5rem;
+  }
 
 footer {
   text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #666;
 }
 
 @media only screen and (max-width: 600px) {
@@ -243,7 +266,7 @@ footer {
   }
 
   .main-title {
-    font-size: 1.45em;
+    font-size: 3em;
   }
   .bg-black {
     padding: 5px;
