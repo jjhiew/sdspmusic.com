@@ -1,3 +1,3 @@
-This is a simple website for the Swim Dads band.
+This is a simple website for the SDSP Band website.
 
 Hosted via Github Pages.
