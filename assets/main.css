@@ -29,6 +29,7 @@ body {
   box-sizing: border-box;
 }
 
+
 a.button {
   display: inline-block;
   background: #e91e63;
@@ -210,7 +211,7 @@ section {
 }
 
 form {
-  max-width: 300px;
+  max-width: 600px;
   margin: 20px auto;
 }
 label,
@@ -224,9 +225,33 @@ input,
 textarea {
   padding: 10px;
 }
-button {
+
+#mc_embed_signup {
+ margin: auto;
+ width: 100%;
+}
+
+#mc_embed_signup_scroll {
+ margin: auto;
+ width: 100%;
+}
+
+#mce-EMAIL {
+  border: 1px black;
+  border-radius: 4px;
+}
+
+#mc-embedded-subscribe {
+  display: inline-block;
+  background: #111;
+  color: white;
   padding: 10px 20px;
-  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px #111;
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .header-bg-black {
@@ -389,4 +414,8 @@ footer {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.newsletter {
+  background-color: #666;
 }
