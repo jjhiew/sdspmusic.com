@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #000;
+  --accent-cyan: #00ffff;
+  --accent-magenta: #ff00ff;
+  --text-main: #fff;
+  --text-muted: #aaa;
+}
+
 h1,
 h2,
 h3,
@@ -15,11 +23,14 @@ h2 {
   font-size: 2em;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   margin: 0;
   padding: 0;
   background: #111;
-  color: #eee;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+  font-size: 1.25rem;
+  
 }
 
 /******************
@@ -47,8 +58,9 @@ a.button.disabled {
   color: white;
 }
 
-a.button:hover {
-  background: #f3f3f3;
+a:hover, .button:hover {
+  text-shadow: 0 0 6px var(--accent-cyan);
+  color: var(--accent-cyan);
 }
 
 .main-nav {
@@ -56,6 +68,8 @@ a.button:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid rgba(0,255,255,0.2);
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);  
 }
 
 .nav-container {
@@ -75,7 +89,7 @@ a.button:hover {
 }
 
 .nav-logo-img {
-  height: 40px;
+  height: 50px;
   width: auto;
   display: block;
   filter: drop-shadow(0 0 4px #0ff);
@@ -102,9 +116,9 @@ a.button:hover {
   font-weight: bold;
 }
 
-.nav-menu li a:hover {
+/* .nav-menu li a:hover {
   text-decoration: underline;
-}
+} */
 
 /* Hamburger button - hidden on desktop */
 .nav-toggle {
@@ -329,6 +343,10 @@ footer {
   .band-image img {
     max-width: 100%;
   }
+
+  .nav-logo-img {
+    height: 40px;
+  }  
 }
 
 .video-wrapper {
