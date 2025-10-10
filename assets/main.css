@@ -32,12 +32,23 @@ body {
 
 a.button {
   display: inline-block;
-  background: #e91e63;
-  color: white;
-  padding: 10px 20px;
+  margin-top: 1.5rem;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 9999px;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
+  transition: background 0.2s ease;
+}
+
+a.button.disabled {
+  background: grey;
+  color: white;
+}
+
+a.button:hover {
+  background: #f3f3f3;
 }
 
 .main-nav {
@@ -50,7 +61,7 @@ a.button {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,6 +72,11 @@ a.button {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0;
+}
+
+.nav-logo-link {
+  color: white;
+  text-decoration: none;
 }
 
 .nav-menu {
@@ -419,4 +435,50 @@ footer {
 
 .newsletter {
   background-color: #666;
+}
+
+/*************************/
+/***** Shows *************/
+
+.shows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.show-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-content p {
+  margin: 0.2rem 0;
+}
+
+.shows img {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .shows {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .show-content {
+    align-items: flex-start;
+  }
 }
