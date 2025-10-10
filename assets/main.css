@@ -74,6 +74,13 @@ a.button:hover {
   margin-bottom: 0;
 }
 
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 4px #0ff);
+}
+
 .nav-logo-link {
   color: white;
   text-decoration: none;
