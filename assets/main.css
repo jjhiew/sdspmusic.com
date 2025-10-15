@@ -170,7 +170,7 @@ a:hover, .button:hover {
 header {
   text-align: center;
   background-size: cover;
-  background-image: url("images/sdsp_banner_2.jpg");
+  background-image: url("images/sdsp_banner3.jpg");
   background-position: 30% 30%;
   /* background-image: url("images/sdsp_outline.jpg"); */
   color: white;
@@ -298,6 +298,14 @@ textarea {
   margin-bottom: 20px;
 }
 
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .header-bg-black {
   background-color: rgba(0, 0, 0, 0.65);
   padding: 10px;
@@ -305,6 +313,10 @@ textarea {
   padding-bottom: 100px;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
   border-radius: 10px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+
 }
 
   .main-title {
