@@ -27,28 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
-  // Modal for image gallery
-  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modal-img");
-  const images = document.querySelectorAll(".grid-image");
-  const closeBtn = document.querySelector(".modal-close");
-
-  images.forEach(img => {
-    img.addEventListener("click", () => {
-      modal.style.display = "block";
-      modalImg.src = img.src;
-    });
-  });
-
-  closeBtn.onclick = () => {
-    modal.style.display = "none";
-  };
-
-  // Close modal when clicking outside the image
-  window.onclick = (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  };  
 });
