@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             date: "2025-12-13",
             venue: "Sneaky Dee's",
             location: "Toronto, ON",
-            details: 'Guest Bands TBA'
+            details: '<a href="https://www.ticketweb.ca/event/sdsp-w-keram-simple-sailor-sneaky-dees-concert-venue-tickets/14691463?fbclid=PAT01DUAOEPE5leHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeik0pLOenYLzqIOJeYubE4u5OMyYjedIPR3LWWgeRJIyho5WVvq_IorLsJqA_aem_AL9l46k0hpiNNRVJvRdodQ" target="_blank">BUY TICKETS!</a>'
         }
     ];
 
@@ -32,7 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     shows
         .sort((a, b) => new Date(a.date) - new Date(b.date)) // sort by date ascending
         .forEach(show => {
-            const showDate = new Date(show.date);
+
+            const dateStr = show.date;
+            const [year, month, day] = dateStr.split('-').map(Number);
+            const showDate = new Date(year, month - 1, day);
+
             const formatted = showDate.toLocaleDateString("en-US", {
                 month: "short",
                 day: "numeric",
