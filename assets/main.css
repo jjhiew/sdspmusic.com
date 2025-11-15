@@ -517,12 +517,18 @@ footer {
   text-align: center;
 }
 
-.shows-section h2 {
+.shows-section-home {
+  margin: auto;
+  max-width: 660px;
+  background-color: #111;
+}
+
+/* .shows-section h2 {
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
   letter-spacing: 1px;
-}
+} */
 
 .shows-group {
   max-width: 900px;
@@ -568,6 +574,7 @@ footer {
   font-weight: 600;
   min-width: 110px;
   text-align: left;
+  padding-right: 30px;
 }
 
 .show-details {

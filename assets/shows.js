@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const showDate = new Date(year, month - 1, day);
 
             const formatted = showDate.toLocaleDateString("en-US", {
+                weekday: "short",
                 month: "short",
                 day: "numeric",
                 year: "numeric"
