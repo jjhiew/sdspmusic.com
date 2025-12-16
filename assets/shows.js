@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             date: "2025-12-13",
             venue: "Sneaky Dee's",
             location: "Toronto, ON",
-            details: '<a href="https://www.ticketweb.ca/event/sdsp-w-keram-simple-sailor-sneaky-dees-concert-venue-tickets/14691463?fbclid=PAT01DUAOEPE5leHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeik0pLOenYLzqIOJeYubE4u5OMyYjedIPR3LWWgeRJIyho5WVvq_IorLsJqA_aem_AL9l46k0hpiNNRVJvRdodQ" target="_blank">BUY TICKETS!</a>'
+            details: ''
         }
     ];
 
