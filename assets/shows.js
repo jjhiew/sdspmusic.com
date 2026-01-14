@@ -21,7 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
             venue: "Sneaky Dee's",
             location: "Toronto, ON",
             details: ''
-        }
+        },
+        {
+            date: "2026-02-20",
+            venue: "Supermarket",
+            location: "Toronto, ON",
+            details: '<a href="https://www.ticketweb.ca/event/ominous-anonymous-album-release-show-supermarket-tickets/14076214?fbclid=PAT01DUAPUtuJleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeYyTl0yhAeP39m5NDImghZVGmpgjXV4ZsAP36_2Gc8_4Z9a6NoIcF2pvINeQ_aem_mKA0araOEi35whGBQKQMAw" target="_blank">BUY TICKETS!</a>'
+        }        
     ];
 
     // --- Build show cards dynamically ---
