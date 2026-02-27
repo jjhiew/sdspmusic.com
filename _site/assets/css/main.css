@@ -170,7 +170,7 @@ a:hover, .button:hover {
 header {
   text-align: center;
   background-size: cover;
-  background-image: url("images/sdsp_banner3.jpg");
+  background-image: url("../images/sdsp_banner3.jpg");
   background-position: 30% 30%;
   color: white;
   padding: 200px 20px;
