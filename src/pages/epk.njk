@@ -68,68 +68,81 @@ class="epk-divider">
         class="epk-photo-grid">
         <!-- Band Logo -->
         <div class="epk-photo-card">
-            <img src="/assets/images/sdsp_logo.png" alt="SDSP Band Logo" loading="lazy">
-            <div class="epk-photo-overlay">
+            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_logo.png', 'Band Logo')">
+                <img src="/assets/images/sdsp_logo.png" alt="SDSP Band Logo" loading="lazy">
+            </div>
+            <div class="epk-photo-footer">
                 <span class="epk-photo-label">Band Logo</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_logo.png" download="SDSP_Logo.png">
-                    ↓ Download
-                </a>
+                <a class="epk-download-btn" href="/assets/images/sdsp_logo.png" download="SDSP_Logo.png">↓ Download</a>
             </div>
         </div>
-        <!-- Hero / Band Photo -->
+        <!-- Band Photo -->
         <div class="epk-photo-card">
-            <img src="/assets/images/sdsp_banner3.jpg" alt="SDSP Band Photo" loading="lazy">
-            <div class="epk-photo-overlay">
+            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_banner3.jpg', 'Band Photo')">
+                <img src="/assets/images/sdsp_banner3.jpg" alt="SDSP Band Photo" loading="lazy">
+            </div>
+            <div class="epk-photo-footer">
                 <span class="epk-photo-label">Band Photo</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_banner3.jpg" download="SDSP_Band_Photo.jpg">
-                    ↓ Download
-                </a>
+                <a class="epk-download-btn" href="/assets/images/sdsp_banner3.jpg" download="SDSP_Band_Photo.jpg">↓ Download</a>
             </div>
         </div>
-        <!-- Band Photo 2 -->
+        <!-- Collage -->
         <div class="epk-photo-card">
-            <img src="/assets/images/sdsp_band_collage.jpg" alt="SDSP Live Action Shot" loading="lazy">
-            <div class="epk-photo-overlay">
+            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_band_collage.jpg', 'Collage')">
+                <img src="/assets/images/sdsp_band_collage.jpg" alt="SDSP Band Collage" loading="lazy">
+            </div>
+            <div class="epk-photo-footer">
                 <span class="epk-photo-label">Collage</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_band_collage.jpg" download="SDSP_Live_1.jpg">
-                    ↓ Download
-                </a>
+                <a class="epk-download-btn" href="/assets/images/sdsp_band_collage.jpg" download="SDSP_Collage.jpg">↓ Download</a>
             </div>
         </div>
-        <!-- Action Shot 1 -->
+        <!-- Live Shot -->
         <div class="epk-photo-card">
-            <img src="/assets/images/sdsp_live_shot.jpg" alt="SDSP Stage Shot" loading="lazy">
-            <div class="epk-photo-overlay">
-                <span class="epk-photo-label">Stage Shot</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_live_shot.jpg" download="SDSP_Stage_Shot.jpg">
-                    ↓ Download
-                </a>
+            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_live_shot.jpg', 'Live Shot')">
+                <img src="/assets/images/sdsp_live_shot.jpg" alt="SDSP Live Shot" loading="lazy">
+            </div>
+            <div class="epk-photo-footer">
+                <span class="epk-photo-label">Live Shot</span>
+                <a class="epk-download-btn" href="/assets/images/sdsp_live_shot.jpg" download="SDSP_Live_Shot.jpg">↓ Download</a>
             </div>
         </div>
-        <!-- Action Shot 2 -->
+        <!-- On Stage -->
         <div class="epk-photo-card">
-            <img src="/assets/images/sdsp_live_guitars.jpg" alt="SDSP Performance Photo" loading="lazy">
-            <div class="epk-photo-overlay">
-                <span class="epk-photo-label">Performance</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_live_guitars.jpg" download="SDSP_Performance.jpg">
-                    ↓ Download
-                </a>
+            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_live_guitars.jpg', 'On Stage')">
+                <img src="/assets/images/sdsp_live_guitars.jpg" alt="SDSP on stage" loading="lazy">
+            </div>
+            <div class="epk-photo-footer">
+                <span class="epk-photo-label">On Stage</span>
+                <a class="epk-download-btn" href="/assets/images/sdsp_live_guitars.jpg" download="SDSP_On_Stage.jpg">↓ Download</a>
             </div>
         </div>
         <!-- Sticker -->
         <div class="epk-photo-card">
-            <img
-                src="/assets/images/sdsp_sticker.jpg"
-                alt="SDSP Sticker"
-                loading="lazy"
-                style="object-fit:contain; background:#000; padding:1rem;">
-            <div class="epk-photo-overlay">
+            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_sticker.jpg', 'Sticker')">
+                <img
+                    src="/assets/images/sdsp_sticker.jpg"
+                    alt="SDSP Sticker"
+                    loading="lazy"
+                    style="object-fit:contain; background:#000; padding:1rem;">
+            </div>
+            <div class="epk-photo-footer">
                 <span class="epk-photo-label">Sticker</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_sticker.jpg" download="SDSP_Sticker.jpg">
-                    ↓ Download
-                </a>
+                <a class="epk-download-btn" href="/assets/images/sdsp_sticker.jpg" download="SDSP_Sticker.jpg">↓ Download</a>
             </div>
         </div>
+    </div>
+</div>
+<!-- Modal Lightbox -->
+<div
+    class="epk-modal"
+    id="epk-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Photo lightbox"
+    onclick="epkCloseModal(event)">
+    <button class="epk-modal-close" onclick="epkCloseModalDirect()" aria-label="Close">&times;</button>
+    <div class="epk-modal-inner">
+        <img class="epk-modal-img" id="epk-modal-img" src="" alt="">
     </div>
 </div>
 <hr
@@ -159,7 +172,8 @@ class="epk-divider">
                     viewbox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                    stroke-width="2.5">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
                 Download Stage Plot
             </a>
@@ -189,6 +203,7 @@ class="epk-divider">
     </a>
 </div>
 <script>
+    // ── Copy Bio ──────────────────────────────────────────
     function epkCopyBio() {
         const bio = document.getElementById('epk-bio-content').innerText;
         const btn = document.getElementById('epk-copy-btn');
@@ -205,4 +220,36 @@ class="epk-divider">
                 }, 2500);
             });
     }
+    // ── Modal Lightbox ────────────────────────────────────
+    const modal = document.getElementById('epk-modal');
+    const modalImg = document.getElementById('epk-modal-img');
+    function epkOpenModal(src, alt) {
+        modalImg.src = src;
+        modalImg.alt = alt;
+        modal.classList.add('open');
+        document
+            .body
+            .style
+            .overflow = 'hidden';
+    }
+    function epkCloseModalDirect() {
+        modal.classList.remove('open');
+        document
+            .body
+            .style
+            .overflow = '';
+        setTimeout(() => {
+            modalImg.src = '';
+        }, 200);
+    }
+    function epkCloseModal(e) {
+        if (e.target === modal) 
+            epkCloseModalDirect();
+        
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') 
+            epkCloseModalDirect();
+        
+    });
 </script>
