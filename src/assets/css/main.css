@@ -422,7 +422,7 @@ section {
 }
 
 .epk-hero h1 {
-  font-size: 3rem;
+  font-size: 5.5rem;
   background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -801,7 +801,7 @@ section {
 
 /* EPK responsive */
 @media (max-width: 640px) {
-  .epk-hero h1 { font-size: 2rem; }
+  .epk-hero h1 { font-size: 3rem; }
   .epk-photo-grid {
     grid-template-columns: 1fr;
   }
