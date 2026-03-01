@@ -411,6 +411,340 @@ section {
 }
 
 /* ==========================================================================
+   EPK PAGE
+   ========================================================================== */
+
+.epk-hero {
+  text-align: center;
+  background: linear-gradient(180deg, #000 0%, var(--bg-secondary) 100%);
+  padding: 4rem 1rem 2rem;
+  border-bottom: 1px solid rgba(0,255,255,0.15);
+}
+
+.epk-hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.25rem;
+}
+
+.epk-hero p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Sections */
+.epk-section {
+  padding: 3rem 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.epk-section h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-cyan);
+  border-bottom: 1px solid rgba(0,255,255,0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.epk-divider {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 0;
+}
+
+/* Bio */
+.epk-bio-box {
+  background: var(--bg-tertiary);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.epk-bio-text {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.epk-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.epk-copy-btn:hover {
+  background: var(--accent-cyan);
+  color: #000;
+  box-shadow: 0 0 12px rgba(0,255,255,0.4);
+}
+
+.epk-copy-btn.copied {
+  border-color: var(--accent-neon-cyan);
+  color: var(--accent-neon-cyan);
+}
+
+/* Video */
+.epk-video-section {
+  background: #000;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  text-align: center;
+}
+
+.epk-video-section h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-cyan);
+  border-bottom: 1px solid rgba(0,255,255,0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.epk-video-caption {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.epk-video-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.epk-video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.epk-video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* Photo Gallery */
+.epk-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.epk-photo-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  cursor: pointer;
+}
+
+.epk-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.epk-photo-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.5);
+}
+
+.epk-photo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  gap: 0.5rem;
+}
+
+.epk-photo-card:hover .epk-photo-overlay {
+  opacity: 1;
+}
+
+.epk-photo-label {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.epk-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--accent-cyan);
+  color: #000;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.epk-download-btn:hover {
+  box-shadow: 0 0 14px rgba(0,255,255,0.6);
+}
+
+/* PDF Stage Plot */
+.epk-pdf-wrap {
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+}
+
+.epk-pdf-frame {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+  background: #111;
+}
+
+.epk-pdf-actions {
+  padding: 1rem 1.25rem;
+  background: var(--bg-tertiary);
+  border-top: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.epk-pdf-actions span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.epk-pdf-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--accent-magenta);
+  color: var(--accent-magenta);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 1.3rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.epk-pdf-download-btn:hover {
+  background: var(--accent-magenta);
+  color: #000;
+  box-shadow: 0 0 12px rgba(255,0,255,0.4);
+}
+
+/* Book the Band CTA */
+.epk-book-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+  border-top: 1px solid rgba(255,0,255,0.15);
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.epk-book-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.epk-book-section p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.epk-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(90deg, var(--accent-magenta), var(--accent-pink));
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(255,0,255,0.3);
+}
+
+.epk-book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(255,0,255,0.55);
+}
+
+/* EPK responsive */
+@media (max-width: 640px) {
+  .epk-hero h1 { font-size: 2rem; }
+  .epk-photo-grid {
+    grid-template-columns: 1fr;
+  }
+  .epk-pdf-frame { height: 320px; }
+  .epk-pdf-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
    7. UTILITIES & ANIMATIONS
    ========================================================================== */
 
