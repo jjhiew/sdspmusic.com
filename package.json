@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "dev": "./node_modules/.bin/http-server"
+    "dev": "eleventy --serve",
+    "build": "eleventy"
   },
   "dependencies": {
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
   }
 }
