@@ -1,6 +1,6 @@
 # sdspmusic.com
 
-Official website for **SDSP**, a band based in San Diego, CA. The site serves as a hub for fans and industry contacts, providing information about the band, upcoming shows, music videos, and an Electronic Press Kit (EPK).
+Official website for **SDSP**, a band based in Toronto, CA. The site serves as a hub for fans and industry contacts, providing information about the band, upcoming shows, music videos, and an Electronic Press Kit (EPK).
 
 🌐 **Live site:** [www.sdspmusic.com](https://www.sdspmusic.com)
 
