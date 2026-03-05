@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.vue';
+import ShowsContent from '../components/ShowsContent.vue';
+---
+
+<BaseLayout
+  title="Shows | SDSP"
+  description="Upcoming Shows and Tickets | SDSP"
+>
+  <ShowsContent />
+
+  <Fragment slot="extra-scripts">
+    <script is:inline src="/assets/js/shows.js"></script>
+  </Fragment>
+</BaseLayout>

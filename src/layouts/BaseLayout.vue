@@ -1,0 +1,90 @@
+<script setup>
+defineProps({
+  title: String,
+  description: String,
+});
+</script>
+
+<template>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" :content="description || 'SDSP are a Toronto post-punk indie band serving up riffs.'">
+    <meta name="keywords" content="SDSP, Swim Dads, Toronto rock band, live music Toronto, punk rock band, indie rock band, post-punk band, live music, Toronto live band, book a band Toronto, party band GTA, festival band Toronto, local rock bands, Toronto music events">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <title>{{ title || 'SDSP | Toronto Post-punk Band' }}</title>
+  </head>
+  <body>
+
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a class="nav-logo-link" href="/">
+            <img class="nav-logo-img" src="/assets/images/sdsp_logo.png" alt="SDSP logo - click to go back to home" />
+          </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#about">About Us</a></li>        
+          <li><a href="/shows">Shows</a></li>
+          <li><a href="/#demos">Demos</a></li>        
+          <li><a href="/videos">Videos</a></li>
+          <li><a href="/epk">EPK</a></li>
+
+          <!-- Instagram Icon -->
+          <a href="https://instagram.com/sdspmusic" target="_blank" rel="noopener" class="nav-icon social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="icon">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" />
+              <circle cx="12" cy="12" r="3.5" />
+              <circle cx="17.5" cy="6.5" r="0.8" />
+            </svg>
+          </a>           
+
+          <a href="https://www.youtube.com/@sdspmusic" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.7-.8-1.5-.8-1.9-.9C17.8 2.7 12 2.7 12 2.7h-.1s-5.8 0-8.8.3c-.4 0-1.2.1-1.9.9C.7 4.6.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.6.8 2.3c.7.8 1.7.8 2.1.9 1.5.1 6.6.3 8.5.3h.3c2.9 0 8.7-.3 8.7-.3.4 0 1.2-.1 1.9-.9.6-.7.8-2.3.8-2.3s.5-1.9.5-3.8V10c0-1.9-.5-3.8-.5-3.8zM9.6 14.9V7.9l6.2 3.5-6.2 3.5z"/>
+            </svg>
+          </a>        
+        </ul>       
+      </div>
+    </nav>
+
+    <slot></slot>
+
+    <footer>
+      <p>&copy; 2025 SDSP. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/sdspmusic" target="_blank" rel="noopener" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="icon">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" />
+            <circle cx="12" cy="12" r="3.5" />
+            <circle cx="17.5" cy="6.5" r="0.8" />
+          </svg>
+        </a>
+
+        <a href="https://www.youtube.com/@sdspmusic" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.7-.8-1.5-.8-1.9-.9C17.8 2.7 12 2.7 12 2.7h-.1s-5.8 0-8.8.3c-.4 0-1.2.1-1.9.9C.7 4.6.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.6.8 2.3c.7.8 1.7.8 2.1.9 1.5.1 6.6.3 8.5.3h.3c2.9 0 8.7-.3 8.7-.3.4 0 1.2-.1 1.9-.9.6-.7.8-2.3.8-2.3s.5-1.9.5-3.8V10c0-1.9-.5-3.8-.5-3.8zM9.6 14.9V7.9l6.2 3.5-6.2 3.5z"/>
+          </svg>
+        </a>
+
+        <a href="mailto:sdsmpmusic@gmail.com" class="social-icon" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="icon">
+            <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+            <polyline points="3,7 12,13 21,7" />
+          </svg>
+        </a>      
+      </div>    
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <slot name="extra-scripts"></slot>
+  </body>
+  </html>
+</template>

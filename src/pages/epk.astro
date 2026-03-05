@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.vue';
+import EpkContent from '../components/EpkContent.vue';
+---
+
+<BaseLayout
+  title="EPK | SDSP"
+  description="SDSP Electronic Press Kit — bio, live video, press photos, stage plot, and booking info."
+>
+  <EpkContent />
+
+  <Fragment slot="extra-scripts">
+    <script is:inline>
+      // ── Copy Bio ──────────────────────────────────────────
+      function epkCopyBio() {
+          const bio = document.getElementById('epk-bio-content').innerText;
+          const btn = document.getElementById('epk-copy-btn');
+          const label = document.getElementById('epk-copy-label');
+          navigator
+              .clipboard
+              .writeText(bio)
+              .then(() => {
+                  btn.classList.add('copied');
+                  label.textContent = 'Copied!';
+                  setTimeout(() => {
+                      btn.classList.remove('copied');
+                      label.textContent = 'Copy Bio';
+                  }, 2500);
+              });
+      }
+      // ── Modal Lightbox ────────────────────────────────────
+      const modal = document.getElementById('epk-modal');
+      const modalImg = document.getElementById('epk-modal-img');
+      function epkOpenModal(src, alt) {
+          modalImg.src = src;
+          modalImg.alt = alt;
+          modal.classList.add('open');
+          document
+              .body
+              .style
+              .overflow = 'hidden';
+      }
+      function epkCloseModalDirect() {
+          modal.classList.remove('open');
+          document
+              .body
+              .style
+              .overflow = '';
+          setTimeout(() => {
+              modalImg.src = '';
+          }, 200);
+      }
+      function epkCloseModal(e) {
+          if (e.target === modal) 
+              epkCloseModalDirect();
+          
+      }
+      document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') 
+              epkCloseModalDirect();
+          
+      });
+  </script>
+  </Fragment>
+</BaseLayout>
