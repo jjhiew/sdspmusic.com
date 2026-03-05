@@ -8,30 +8,33 @@ document.addEventListener("DOMContentLoaded", () => {
             date: "2025-08-31",
             venue: "Burdock Music Hall",
             location: "Toronto, ON",
-            details: ''
-        },        
+            ticketUrl: ''
+        },
         {
             date: "2025-10-28",
             venue: "The Painted Lady",
             location: "Toronto, ON",
-            details: ''
+            ticketUrl: ''
         },
         {
             date: "2025-12-13",
             venue: "Sneaky Dee's",
             location: "Toronto, ON",
-            details: ''
+            ticketUrl: ''
         },
         {
             date: "2026-02-20",
             venue: "Supermarket",
             location: "Toronto, ON",
-            details: '<a href="https://www.ticketweb.ca/event/ominous-anonymous-album-release-show-supermarket-tickets/14076214?fbclid=PAT01DUAPUtuJleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeYyTl0yhAeP39m5NDImghZVGmpgjXV4ZsAP36_2Gc8_4Z9a6NoIcF2pvINeQ_aem_mKA0araOEi35whGBQKQMAw" target="_blank">BUY TICKETS!</a>'
-        }        
+            ticketUrl: 'https://www.ticketweb.ca/event/ominous-anonymous-album-release-show-supermarket-tickets/14076214?fbclid=PAT01DUAPUtuJleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeYyTl0yhAeP39m5NDImghZVGmpgjXV4ZsAP36_2Gc8_4Z9a6NoIcF2pvINeQ_aem_mKA0araOEi35whGBQKQMAw'
+        }
     ];
 
     // --- Build show cards dynamically ---
     const today = new Date();
+    // Normalize today to start of day for accurate comparison
+    today.setHours(0, 0, 0, 0);
+
     const upcomingContainer = document.querySelector("#upcoming-shows .shows-list");
     const pastContainer = document.querySelector("#past-shows .shows-list");
 
@@ -50,6 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 year: "numeric"
             });
 
+            // Only show ticket link if it's not past and URL exists
+            const showTicketLink = show.ticketUrl && showDate >= today;
+            const ticketLinkHtml = showTicketLink
+                ? `<div class="show-link"><a href="${show.ticketUrl}" target="_blank">BUY TICKETS!</a></div>`
+                : "";
+
             const card = document.createElement("div");
             card.className = "show-card";
             card.innerHTML = `
@@ -58,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="show-venue">${show.venue}</div>
             <div class="show-location">${show.location}</div>
           </div>
-          ${show.details ? `<div class="show-link">${show.details}</div>` : ""}
+          ${ticketLinkHtml}
         `;
 
             if (showDate >= today) {
