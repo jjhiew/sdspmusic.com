@@ -215,6 +215,107 @@ header .header-bg {
   font-size: 5rem;
 }
 
+/* Coming Soon Section */
+.coming-soon-section {
+  padding: 4rem 1rem;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.ep-preview-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.ep-cover-art {
+  flex: 0 0 350px;
+  max-width: 350px;
+}
+
+.ep-cover-art img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  display: block;
+  border: 1px solid #333;
+}
+
+.ep-cover-art img:hover {
+  transform: scale(1.02);
+}
+
+.ep-details {
+  flex: 1;
+}
+
+.ep-details h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+.ep-details h3 .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.tracklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.tracklist li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  border-left: 2px solid var(--accent-cyan);
+  padding-left: 1rem;
+}
+
+.tracklist li strong {
+  color: var(--text-main);
+  margin-right: 0.5rem;
+}
+
+.release-info {
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  .ep-preview-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .ep-cover-art {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .tracklist li {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
 /* Footer */
 footer {
   text-align: center;

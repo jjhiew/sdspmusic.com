@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const showTicketLink = show.ticketUrl && showDate >= today;
             const ticketLinkHtml = showTicketLink
                 ? `<div class="show-link"><a href="${show.ticketUrl}" target="_blank">BUY TICKETS!</a></div>`
-                : `<div class="show-link">TICKETS COMING SOON!</div>`;
+                : ``;
 
             const card = document.createElement("div");
             card.className = "show-card";
