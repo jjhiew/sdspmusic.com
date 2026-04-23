@@ -103,6 +103,11 @@ a.button.disabled {
   filter: drop-shadow(0 0 4px var(--accent-neon-cyan));
 }
 
+.social-icon[aria-label="SoundCloud"]:hover {
+  color: #ff5500;
+  filter: drop-shadow(0 0 4px #ff5500);
+}
+
 .social-icon:hover .icon {
   animation: flicker 0.6s infinite;
 }
@@ -402,10 +407,24 @@ section {
   width: 100%;
 }
 
+.mc-field-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mc-field-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 #mce-EMAIL {
-  border: 1px black;
+  border: 1px solid black;
   border-radius: 4px;
   padding: 10px;
+  width: 100%;
+  max-width: 300px;
 }
 
 #mc-embedded-subscribe {
