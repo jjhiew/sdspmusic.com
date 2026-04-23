@@ -27,7 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
             venue: "Supermarket",
             location: "Toronto, ON",
             ticketUrl: 'https://www.ticketweb.ca/event/ominous-anonymous-album-release-show-supermarket-tickets/14076214?fbclid=PAT01DUAPUtuJleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeYyTl0yhAeP39m5NDImghZVGmpgjXV4ZsAP36_2Gc8_4Z9a6NoIcF2pvINeQ_aem_mKA0araOEi35whGBQKQMAw'
-        }
+        },
+        {
+            date: "2026-05-30",
+            venue: "Sneaky Dee's",
+            location: "Toronto, ON",
+            ticketUrl: 'https://www.ticketweb.ca/event/saltwave-w-sdsp-the-lee-sneaky-dees-concert-venue-tickets/14866683'
+        }        
     ];
 
     // --- Build show cards dynamically ---
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const showTicketLink = show.ticketUrl && showDate >= today;
             const ticketLinkHtml = showTicketLink
                 ? `<div class="show-link"><a href="${show.ticketUrl}" target="_blank">BUY TICKETS!</a></div>`
-                : "";
+                : ``;
 
             const card = document.createElement("div");
             card.className = "show-card";
