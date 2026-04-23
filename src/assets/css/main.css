@@ -325,7 +325,7 @@ section {
    ========================================================================== */
 
 /* Shows Section */
-.shows-section {
+.shows-section, .subpage-section {
   padding: var(--section-padding);
   background-color: #0e0e0e;
   color: #f5f5f5;
