@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             date: "2026-05-30",
             venue: "Sneaky Dee's",
             location: "Toronto, ON",
-            ticketUrl: ''
+            ticketUrl: 'https://www.ticketweb.ca/event/saltwave-w-sdsp-the-lee-sneaky-dees-concert-venue-tickets/14866683'
         }        
     ];
 
