@@ -302,6 +302,73 @@ header .header-bg {
   text-transform: uppercase;
 }
 
+.music-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.listen-now-heading {
+  font-size: 1.1rem;
+  color: var(--accent-cyan);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.music-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.music-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.music-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.music-link.spotify:hover {
+  color: #1DB954;
+  border-color: #1DB954;
+  box-shadow: 0 0 10px rgba(29, 185, 84, 0.3);
+}
+
+.music-link.apple:hover {
+  color: #FA243C;
+  border-color: #FA243C;
+  box-shadow: 0 0 10px rgba(250, 36, 60, 0.3);
+}
+
+.music-link.youtube:hover {
+  color: #FF0000;
+  border-color: #FF0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.music-link.bandcamp:hover {
+  color: #6299a8;
+  border-color: #6299a8;
+  box-shadow: 0 0 10px rgba(98, 153, 168, 0.3);
+}
+
 @media (max-width: 850px) {
   .ep-preview-container {
     flex-direction: column;
@@ -318,6 +385,14 @@ header .header-bg {
   .tracklist li {
     border-left: none;
     padding-left: 0;
+  }
+
+  .music-links {
+    justify-content: center;
+  }
+
+  .listen-now-heading {
+    text-align: center;
   }
 }
 
