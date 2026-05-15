@@ -369,6 +369,12 @@ header .header-bg {
   box-shadow: 0 0 10px rgba(98, 153, 168, 0.3);
 }
 
+.music-link.amazon:hover {
+  color: #FF9900;
+  border-color: #FF9900;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.3);
+}
+
 @media (max-width: 850px) {
   .ep-preview-container {
     flex-direction: column;
