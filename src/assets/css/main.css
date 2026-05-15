@@ -533,77 +533,14 @@ section {
   background-color: var(--bg-secondary);
 }
 
-.shows-group {
-  max-width: 900px;
-  margin: 2rem auto;
+.shows-list {
+  margin: auto;
+  max-width: 1000px;
 }
 
-.shows-group h3 {
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #444;
-  display: inline-block;
-  padding-bottom: 0.25rem;
-}
 
-.shows-list:empty::after {
-  content: "No shows yet — stay tuned.";
-  display: block;
-  color: var(--text-dim);
-  font-style: italic;
-  margin-top: 0.5rem;
-}
 
-.show-card {
-  background: var(--bg-tertiary);
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
-  margin: 0.75rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  transition: background 0.2s;
-}
 
-.show-card:hover {
-  background: var(--bg-nav);
-}
-
-.show-date {
-  font-weight: 600;
-  min-width: 110px;
-  text-align: left;
-  padding-right: 30px;
-}
-
-.show-details {
-  flex: 1;
-  text-align: left;
-}
-
-.show-venue { font-size: 1rem; }
-.show-location {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.show-link a {
-  color: var(--accent-red);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.show-link a:hover {
-  text-decoration: underline;
-}
-
-.past {
-  opacity: 0.6;
-}
 
 /* ==========================================================================
    EPK PAGE
@@ -1076,14 +1013,7 @@ section {
   
   .main-title { font-size: 3em; }
 
-  .show-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .show-link {
-    margin-top: 0.5rem;
-  }
 
   .video-grid {
     display: flex;
