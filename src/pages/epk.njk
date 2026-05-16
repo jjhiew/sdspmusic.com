@@ -62,203 +62,34 @@ class="epk-divider">
         </p>
     </div>
 </div>
-<hr
-class="epk-divider">
+<hr class="epk-divider">
 <!-- ═══════════════════════════════════════════
-     PRESS PHOTOS
+     MUSIC
 ═══════════════════════════════════════════ -->
 <div class="epk-section">
-    <h2>Images</h2>
-    <div
-        class="epk-photo-grid">
-        <!-- Band Logo -->
-        <div class="epk-photo-card">
-            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_logo.png', 'Band Logo')">
-                <img src="/assets/images/sdsp_logo.png" alt="SDSP Band Logo" loading="lazy">
-            </div>
-            <div class="epk-photo-footer">
-                <span class="epk-photo-label">Band Logo</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_logo.png" download="SDSP_Logo.png">↓ Download</a>
-            </div>
-        </div>
-        <!-- Band Photo -->
-        <div class="epk-photo-card">
-            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_banner3.jpg', 'Band Photo')">
-                <img src="/assets/images/sdsp_banner3.jpg" alt="SDSP Band Photo" loading="lazy">
-            </div>
-            <div class="epk-photo-footer">
-                <span class="epk-photo-label">Band Photo</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_banner3.jpg" download="SDSP_Band_Photo.jpg">↓ Download</a>
-            </div>
-        </div>
-        <!-- Collage -->
-        <div class="epk-photo-card">
-            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_band_collage.jpg', 'Collage')">
-                <img src="/assets/images/sdsp_band_collage.jpg" alt="SDSP Band Collage" loading="lazy">
-            </div>
-            <div class="epk-photo-footer">
-                <span class="epk-photo-label">Collage</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_band_collage.jpg" download="SDSP_Collage.jpg">↓ Download</a>
-            </div>
-        </div>
-        <!-- Live Shot -->
-        <div class="epk-photo-card">
-            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_live_shot.jpg', 'Live Shot')">
-                <img src="/assets/images/sdsp_live_shot.jpg" alt="SDSP Live Shot" loading="lazy">
-            </div>
-            <div class="epk-photo-footer">
-                <span class="epk-photo-label">Live Shot</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_live_shot.jpg" download="SDSP_Live_Shot.jpg">↓ Download</a>
-            </div>
-        </div>
-        <!-- On Stage -->
-        <div class="epk-photo-card">
-            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_live_guitars.jpg', 'On Stage')">
-                <img src="/assets/images/sdsp_live_guitars.jpg" alt="SDSP on stage" loading="lazy">
-            </div>
-            <div class="epk-photo-footer">
-                <span class="epk-photo-label">On Stage</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_live_guitars.jpg" download="SDSP_On_Stage.jpg">↓ Download</a>
-            </div>
-        </div>
-        <!-- Sticker -->
-        <div class="epk-photo-card">
-            <div class="epk-photo-thumb" onclick="epkOpenModal('/assets/images/sdsp_sticker.jpg', 'Sticker')">
-                <img
-                    src="/assets/images/sdsp_sticker.jpg"
-                    alt="SDSP Sticker"
-                    loading="lazy"
-                    style="object-fit:contain; background:#000; padding:1rem;">
-            </div>
-            <div class="epk-photo-footer">
-                <span class="epk-photo-label">Sticker</span>
-                <a class="epk-download-btn" href="/assets/images/sdsp_sticker.jpg" download="SDSP_Sticker.jpg">↓ Download</a>
-            </div>
-        </div>
+    <h2>Music</h2>
+    <div class="epk-spotify-wrap">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/5OfotB00RVZqUAHPBpJaEZ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 </div>
-<!-- Modal Lightbox -->
-<div
-    class="epk-modal"
-    id="epk-modal"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Photo lightbox"
-    onclick="epkCloseModal(event)">
-    <button class="epk-modal-close" onclick="epkCloseModalDirect()" aria-label="Close">&times;</button>
-    <div class="epk-modal-inner">
-        <img class="epk-modal-img" id="epk-modal-img" src="" alt="">
-    </div>
-</div>
-<hr
-class="epk-divider">
+<hr class="epk-divider">
 <!-- ═══════════════════════════════════════════
-     STAGE PLOT / TECH RIDER
+     FILES & DOWNLOADS (Dropbox)
 ═══════════════════════════════════════════ -->
 <div class="epk-section">
-    <h2>Stage Plot / Tech Rider</h2>
-    <div class="epk-pdf-wrap">
-        <iframe
-            class="epk-pdf-frame"
-            src="/epk/stage-plot.pdf"
-            title="SDSP Stage Plot and Tech Rider PDF"
-            aria-label="Stage Plot PDF Preview">
-            <p>Your browser doesn't support PDF previews.
-                <a href="/epk/stage-plot.pdf" style="color:var(--accent-cyan)">Download the PDF directly.</a>
-            </p>
-        </iframe>
-        <div class="epk-pdf-actions">
-            <span>SDSP-Stage-Plot.pdf</span>
-            <a class="epk-pdf-download-btn" href="/epk/stage-plot.pdf" download="SDSP-Stage-Plot.pdf">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewbox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Download Stage Plot
-            </a>
-        </div>
-    </div>
-</div>
-<hr
-class="epk-divider">
-<!-- ═══════════════════════════════════════════
-     DOWNLOADS
-═══════════════════════════════════════════ -->
-<div class="epk-section">
-    <h2>Downloads</h2>
-    <div
-        class="epk-downloads-list">
-        <!-- One Pager -->
-        <div class="epk-download-item">
-            <div class="epk-download-info">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewbox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-                <span class="epk-download-filename">SDSP - One Pager.pdf</span>
-            </div>
-            <a href="/epk/one-pager.pdf" download="SDSP-One-Pager.pdf" class="epk-download-link">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewbox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Download PDF
-            </a>
-        </div>
-        <!-- Press Kit -->
-        <div class="epk-download-item">
-            <div class="epk-download-info">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewbox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    style="color:var(--accent-magenta)">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                </svg>
-                <span class="epk-download-filename">SDSP - Press Kit (includes photos, logo, and stage plot)</span>
-            </div>
-            <a href="/epk/SDSP-Press-Kit.zip" download="SDSP-Press-Kit.zip" class="epk-download-link magenta">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewbox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Download ZIP
-            </a>
-        </div>
+    <h2>Files & Downloads</h2>
+    <div class="epk-dropbox-wrap">
+        <script
+            type="text/javascript"
+            src="https://www.dropbox.com/static/api/2/dropins.js"
+            id="dropboxjs"
+            data-app-key="bioq22on64gjypq"></script>
+        <a
+            href="https://www.dropbox.com/scl/fo/eoh0itn0swtcajmmkhotv/ABDmFs0Q5WFlZyL_9ENY7tQ?rlkey=v00qqp8kjvhwxrujrhy3k7cz5&st=c8elaith&dl=0"
+            class="dropbox-embed"
+            data-height="800px"
+            data-width="100%"
+            data-folder-view="grid"></a>
     </div>
 </div>
 <hr
@@ -301,36 +132,4 @@ class="epk-divider">
                 }, 2500);
             });
     }
-    // ── Modal Lightbox ────────────────────────────────────
-    const modal = document.getElementById('epk-modal');
-    const modalImg = document.getElementById('epk-modal-img');
-    function epkOpenModal(src, alt) {
-        modalImg.src = src;
-        modalImg.alt = alt;
-        modal.classList.add('open');
-        document
-            .body
-            .style
-            .overflow = 'hidden';
-    }
-    function epkCloseModalDirect() {
-        modal.classList.remove('open');
-        document
-            .body
-            .style
-            .overflow = '';
-        setTimeout(() => {
-            modalImg.src = '';
-        }, 200);
-    }
-    function epkCloseModal(e) {
-        if (e.target === modal) 
-            epkCloseModalDirect();
-        
-    }
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') 
-            epkCloseModalDirect();
-        
-    });
 </script>

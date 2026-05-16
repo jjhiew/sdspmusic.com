@@ -705,205 +705,19 @@ section {
   border: none;
 }
 
-/* Photo Gallery */
-.epk-photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
 
-.epk-photo-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--bg-tertiary);
-  border: 1px solid #2a2a2a;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.epk-photo-card:hover {
-  border-color: rgba(0,255,255,0.3);
-  box-shadow: 0 0 16px rgba(0,255,255,0.08);
-}
-
-.epk-photo-thumb {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  cursor: zoom-in;
-  background: #000;
-}
-
-.epk-photo-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
-}
-
-.epk-photo-card:hover .epk-photo-thumb img {
-  transform: scale(1.04);
-}
-
-.epk-photo-footer {
-  padding: 0.65rem 0.85rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-
-.epk-photo-label {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.epk-download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: transparent;
-  border: 1px solid var(--accent-cyan);
-  color: var(--accent-cyan);
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.3rem 0.85rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.epk-download-btn:hover {
-  background: var(--accent-cyan);
-  color: #000;
-  box-shadow: 0 0 10px rgba(0,255,255,0.4);
-}
-
-/* Modal Lightbox */
-.epk-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9000;
-  background: rgba(0,0,0,0.92);
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  animation: epkModalIn 0.2s ease;
-}
-
-.epk-modal.open {
-  display: flex;
-}
-
-@keyframes epkModalIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.epk-modal-inner {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.epk-modal-img {
-  max-width: 100%;
-  max-height: 88vh;
-  border-radius: 10px;
-  box-shadow: 0 0 60px rgba(0,0,0,0.8);
-  display: block;
-}
-
-.epk-modal-close {
-  position: fixed;
-  top: 1.25rem;
-  right: 1.5rem;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid #444;
-  color: #fff;
-  font-size: 1.5rem;
-  line-height: 1;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
-  z-index: 9001;
-}
-
-.epk-modal-close:hover {
-  background: rgba(255,255,255,0.15);
-}
-
-/* PDF Stage Plot */
-.epk-pdf-wrap {
+/* Dropbox Folder Embed */
+.epk-dropbox-wrap {
   border: 1px solid #333;
   border-radius: 12px;
   overflow: hidden;
   background: #111;
+  min-height: 600px;
 }
 
-.epk-pdf-frame {
-  width: 100%;
-  height: 480px;
-  border: none;
-  display: block;
-  background: #111;
-}
-
-.epk-pdf-actions {
-  padding: 1rem 1.25rem;
-  background: var(--bg-tertiary);
-  border-top: 1px solid #333;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.epk-pdf-actions span {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.epk-pdf-download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  border: 1px solid var(--accent-magenta);
-  color: var(--accent-magenta);
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.5rem 1.3rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.epk-pdf-download-btn:hover {
-  background: var(--accent-magenta);
-  color: #000;
-  box-shadow: 0 0 12px rgba(255,0,255,0.4);
+/* Spotify Embed */
+.epk-spotify-wrap {
+  margin-top: 1rem;
 }
 
 /* Book the Band CTA */
@@ -951,14 +765,7 @@ section {
 /* EPK responsive */
 @media (max-width: 640px) {
   .epk-hero h1 { font-size: 3rem; }
-  .epk-photo-grid {
-    grid-template-columns: 1fr;
-  }
-  .epk-pdf-frame { height: 320px; }
-  .epk-pdf-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .epk-dropbox-wrap { min-height: 450px; }
 }
 
 /* ==========================================================================
@@ -1038,94 +845,6 @@ section {
   }
 }
 
-/* Downloads List */
-.epk-downloads-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-.epk-download-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  background: var(--bg-tertiary);
-  border: 1px solid #333;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.epk-download-item:hover {
-  border-color: #555;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.epk-download-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.epk-download-info svg {
-  color: var(--accent-cyan);
-  flex-shrink: 0;
-}
-
-.epk-download-filename {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 500;
-  color: var(--text-main);
-  font-size: 1.1rem;
-}
-
-.epk-download-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  border: 1px solid var(--accent-cyan);
-  color: var(--accent-cyan);
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.4rem 1.2rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.epk-download-link:hover {
-  background: var(--accent-cyan);
-  color: #000;
-  box-shadow: 0 0 10px rgba(0,255,255,0.3);
-}
-
-.epk-download-link.magenta {
-  border-color: var(--accent-magenta);
-  color: var(--accent-magenta);
-}
-
-.epk-download-link.magenta:hover {
-  background: var(--accent-magenta);
-  color: #000;
-  box-shadow: 0 0 10px rgba(255,0,255,0.3);
-}
-
-@media (max-width: 600px) {
-  .epk-download-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  .epk-download-link {
-    width: 100%;
-    justify-content: center;
-  }
-}
 /* ==========================================================================
    LISTEN LANDING PAGE
    ========================================================================== */
